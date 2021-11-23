@@ -2,6 +2,7 @@ package addressbook;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 public class EmployeePayRollService {
     private List<PayRollData> employeePayRollList;
@@ -42,5 +43,13 @@ public class EmployeePayRollService {
 
     public List<PayRollData> readEmployeePayRollForDateRange(LocalDate startDate, LocalDate endDate) {
         return employeePayRoll.getEmployeeForDateRange(startDate, endDate);
+    }
+
+    public Map<String, Double> readAverageSalaryByGender() {
+        return employeePayRoll.getAverageSalaryByGender();
+    }
+
+    public Map<String, Integer> readCountSalaryByGender() {
+        return employeePayRoll.getCountByGender();
     }
 }
