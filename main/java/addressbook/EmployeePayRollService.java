@@ -52,4 +52,8 @@ public class EmployeePayRollService {
     public Map<String, Integer> readCountSalaryByGender() {
         return employeePayRoll.getCountByGender();
     }
+
+    public void addEmployeePayroll(String name, double salary, LocalDate start, String gender) {
+        employeePayRollList.add(employeePayRoll.addEmployeeToPayroll(name, salary, start, gender));
+    }
 }
