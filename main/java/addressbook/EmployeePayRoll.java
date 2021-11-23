@@ -24,7 +24,7 @@ public class EmployeePayRoll {
         Connection connection;
         System.out.println("Connecting to database :" + jdbcURL);
         connection = DriverManager.getConnection(jdbcURL, userName, passWord);
-        System.out.println("Connection is successfull!!!!" + connection);
+        System.out.println("Connection is successfull!!" + connection);
         return connection;
     }
 
